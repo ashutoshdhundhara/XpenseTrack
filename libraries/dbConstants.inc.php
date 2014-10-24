@@ -11,7 +11,7 @@ define('dbHost', 'localhost');
 // Define DB Username.
 define('dbUser', 'root');
 // Define DB Password.
-define('dbPass', 'logMein');
+define('dbPass', 'root');
 // Define DB Name.
 define('dbName', 'XpenseTrack');
 
