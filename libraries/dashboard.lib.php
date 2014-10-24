@@ -12,9 +12,16 @@ function XT_getHtmlMessageBox($msg)
     $retval = '';
     if (empty($msg)) {
         $msg = 'Everything seems to be in order in this month :-)';
-        if (XT_getCurrentBalance($_SESSION['login_id']) < 1000) {
-            $msg = 'Your balance is low :-(';
+        if (XT_getCurrentBalance($_SESSION['login_id']) > 9999) {
+            $msg = 'You are a RICH guy! :-)';
         }
+        else if (XT_getCurrentBalance($_SESSION['login_id']) < 0) {
+            $msg = 'You are under debt! :-(';
+        }
+        else if (XT_getCurrentBalance($_SESSION['login_id']) < 1000) {
+            $msg = 'Your balance is critically low! :-(';
+        }
+			
     }
     $retval .= XT_Message::notice($msg);
 
