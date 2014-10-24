@@ -13,9 +13,9 @@ $(document).ready(function () {
             cache: false,
             dataType: 'json',
             success: function () {
-                alert();
+                
             }
-        })
+        });
     });
 
     $('#add_expense_form').bind('ajax:complete', function() {
@@ -64,7 +64,16 @@ $(document).ready(function () {
                 return false;
             }
 
-            $('#add_expense_form').submit();
+            $.ajax({
+                type: 'POST',
+                url: 'dashboard.php',
+                data: $('#add_expense_form').serialize(),
+                cache: false,
+                dataType: 'json',
+                success: function () {
+                    
+                }
+            });
         };
         buttonOptions.Cancel = function () {
             $(this).remove();
