@@ -273,7 +273,7 @@ class XT_Header
         $retval = '';
 
         $retval = '<header class="green_grad">'
-            . '<div class="app_title">XpenseTrack</div>'
+            . '<a href="index.php"><div class="app_title">XpenseTrack</div></a>'
             . $this->_getLoginDetails()
             . '</header>';
         $retval .= '<div class="body_area">';
