@@ -1,6 +1,74 @@
 $(document).ready(function () {
     $('[title]').tooltip(tooltip_right);
     $("input:file, select").uniform();
+
+    $('#add_expense').click(function (event) {
+        event.preventDefault();
+        var $dialog_content = '<form id="add_expense_form" action="" method="POST">' +
+            '<input type="hidden" name="add_expense" value="true">' +
+            '<table>' +
+            '<tr>' +
+            '<td>Amount : </td>' +
+            '<td><input id="expense_amount" type="text" name="expense_amount" /></td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td>Type : </td>' +
+            '<td>' + 
+            '<select id="expense_type" name="expense_type">' +
+            '<option value="---">Select Type</option>' +
+            '<option value="FOOD">Food</option>' +
+            '<option value="FEES">Fees</option>' +
+            '<option value="FUN">Fun</option>' +
+            '<option value="DEBT">Debt</option>' +
+            '</select>' +
+            '</td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td>Date : </td>' +
+            '<td><input id="expense_date" class="datefield" type="text" name="expense_date" /></td>' +
+            '</tr>' +
+            '</table>' +
+            '</form>';
+        var buttonOptions = {};
+        buttonOptions.OK = function () {
+            if ($('#expense_amount').val().length === 0) {
+                alert('Enter Amount!');
+                return false;
+            }
+            if ($('#expense_type').val() == '---') {
+                alert('Select Expense type!');
+                return false;
+            }
+            if ($('#expense_date').val().length === 0) {
+                alert('Enter Date!');
+                return false;
+            }
+
+            $('#add_expense_form').submit();
+        };
+        buttonOptions.Cancel = function () {
+            $(this).remove();
+        };
+        // Dialog content.
+        var $dialog_content = $('<div/>').append($dialog_content);
+        // Create dialog.
+        $response_dialog = $($dialog_content).dialog({
+            minWidth: 300,
+            minHeight: 200,
+            modal: true,
+            title: 'Add a new Expense',
+            resizable: false,
+            draggable: true,
+            buttons: buttonOptions,
+            open: function () {
+                $('.ui-dialog select').uniform();
+                $('.ui-dialog .datefield').datepicker(datepicker_defaults);
+            },
+            close: function () {
+                $(this).remove();
+            }
+        });
+    });
 });
 
 /**
@@ -13,6 +81,18 @@ var tooltip_right = {
     },
     disabled: false,
     tooltipClass: 'xt_tooltip'
+};
+
+/**
+ * Default options for datepicker widget.
+ */
+var datepicker_defaults = {
+    defaultDate: new Date(),
+    numberOfMonths: 1,
+    showButtonPanel: false,
+    changeMonth: true,
+    changeYear: true,
+    dateFormat: 'yy-mm-dd'
 };
 
 /**
