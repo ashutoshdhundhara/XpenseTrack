@@ -20,6 +20,4 @@ define('dbName', 'XpenseTrack');
  */
 define('tblUser', 'user_details');
 define('tblUserExpenses', 'user_expenses');
-define('tblExpenses', 'expense_details');
-define('tblCategory', 'category_details');
 ?>
