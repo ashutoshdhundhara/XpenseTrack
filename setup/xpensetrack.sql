@@ -13,7 +13,7 @@ SET time_zone = "+05:30";
 
 CREATE TABLE `user_details` (
   `username` varchar(20) NOT NULL,
-  `password` varchar(50) NOT NULL,
+  `password` char(128) NOT NULL,
   `full_name` varchar(40) NOT NULL,
   `total_expenses` int(10) NOT NULL,
   `total_balance` int(10) NOT NULL,
