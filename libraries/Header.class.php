@@ -78,6 +78,7 @@ class XT_Header
         $default_scripts = array(
             'jquery-1.10.2.min.js',
             'jquery-ui.min.js',
+            'jquery-uniform.js',
             'common.js'
             );
         foreach ($default_scripts as $key => $filename) {
