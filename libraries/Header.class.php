@@ -76,7 +76,7 @@ class XT_Header
     private function _addDefaultFiles()
     {
         $default_scripts = array(
-            'jquery.min.js',
+            'jquery-1.10.2.min.js',
             'jquery-ui.min.js',
             'common.js'
             );
