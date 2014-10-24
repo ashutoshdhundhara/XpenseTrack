@@ -2,6 +2,26 @@ $(document).ready(function () {
     $('[title]').tooltip(tooltip_right);
     $("input:file, select").uniform();
 
+    $('a.delete_expense').click(function (event) {
+        event.preventDefault();
+        $that = $(this);
+        // Ajax request for Cluster map.
+        $.ajax({
+            type: 'GET',
+            url: $that.attr('href'),
+            /*data: '',*/
+            cache: false,
+            dataType: 'json',
+            success: function () {
+                alert();
+            }
+        })
+    });
+
+    $('#add_expense_form').bind('ajax:complete', function() {
+        window.location.reload();
+   });
+
     $('#add_expense').click(function (event) {
         event.preventDefault();
         var $dialog_content = '<form id="add_expense_form" action="" method="POST">' +
@@ -180,3 +200,7 @@ function XT_showNotification(message, type)
 
     return $notification;
 }
+
+$(document).ajaxStop(function(){
+    window.location.reload();
+});

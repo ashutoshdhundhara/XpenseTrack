@@ -75,7 +75,7 @@ function XT_getHtmlMiddlePane()
                 . '<td>' . $row['expense_amount'] . '</td>'
                 . '<td>' . $row['expense_type'] . '</td>'
                 . '<td>' . $row['expense_date'] . '</td>'
-                . '<td><a href="dashboard.php?delete_expense=1&expense_id=' 
+                . '<td><a class="delete_expense" href="dashboard.php?delete_expense=1&expense_id=' 
                 . $row['expense_id'] 
                 . '&expense_amount=' . $row['expense_amount'] . '">Delete</a></td>'
                 . '</tr>';
