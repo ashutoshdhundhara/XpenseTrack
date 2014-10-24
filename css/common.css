@@ -1,0 +1,144 @@
+@font-face {
+    font-family: Existence;
+    src: url("fonts/existence.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Exo 2 Light'), local('Exo2-Light'), url('fonts/exo_300.woff') format('woff');
+}
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Exo 2'), local('Exo2-Regular'), url('fonts/exo_400.woff') format('woff');
+}
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Exo 2 Extra Bold'), local('Exo2-ExtraBold'), url('fonts/exo_800.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Exo 2 Semi Bold'), local('Exo2-SemiBold'), url('fonts/exo_600.woff') format('woff');
+}
+
+html {
+    background-color: #E5E6E7;
+    /*font-family: "Exo 2", sans-serif;*/
+    font-family: "Existence";
+
+}
+
+.green_grad {
+    background: -webkit-linear-gradient(top,#99CCCC, #77AAAA);
+    background:    -moz-linear-gradient(top,#99CCCC, #77AAAA);
+    background:     -ms-linear-gradient(top,#99CCCC, #77AAAA);
+    background:      -o-linear-gradient(top,#99CCCC, #77AAAA);
+    background:         linear-gradient(top,#99CCCC, #77AAAA);
+}
+
+.gray_grad {
+    background: -webkit-linear-gradient(top,#f6f7f9, #E5E6E7);
+    background:    -moz-linear-gradient(top,#f6f7f9, #E5E6E7);
+    background:     -ms-linear-gradient(top,#f6f7f9, #E5E6E7);
+    background:      -o-linear-gradient(top,#f6f7f9, #E5E6E7);
+    background:         linear-gradient(top,#f6f7f9, #E5E6E7);
+}
+
+header {
+    width: 100%;
+    /*height: 5em;*/
+}
+
+.app_title {
+    padding: 0.5em;
+    font-family: "Existence";
+    letter-spacing: -0.1em;
+    font-size: 3.5em;
+    display: inline-block;
+}
+
+.login_details {
+    display: inline-block;
+    float: right;
+    margin-top: 5.8em;
+    margin-right: 0.5em;
+}
+
+.username {
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.logout_link {
+    font-weight: 600;
+}
+
+.login_form {
+    font-weight: bolder;
+    font-size: 1.1em;
+    text-align: center;
+    margin: 0 auto;
+    width: 20em;
+    padding: 2em;
+    margin-top: 8em;
+    /*border: 1px solid rgba(0,0,0,0.6);*/
+    border-top-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    /*background-color: rgba(0,0,0,0.01);*/
+    box-shadow: 20px 20px 90px rgba(0,0,0,0.4);
+}
+
+.login_form td {
+    padding: 0.2em;
+}
+
+.login_form table {
+    margin: 0 auto;
+}
+
+a {
+    color: black;
+}
+
+button {
+    background: #77AAAA;
+    background-image: -webkit-linear-gradient(top, #77AAAA, #99CCCC);
+    background-image: -moz-linear-gradient(top, #77AAAA, #99CCCC);
+    background-image: -ms-linear-gradient(top, #77AAAA, #99CCCC);
+    background-image: -o-linear-gradient(top, #77AAAA, #99CCCC);
+    background-image: linear-gradient(to bottom, #77AAAA, #99CCCC);
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    text-shadow: 1px 1px 3px #666666;
+    font-family: "Existence";
+    color: #ffffff;
+    font-size: 15px;
+    padding: 3px 20px 3px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+button:hover {
+  background: #99CCCC;
+  background-image: -webkit-linear-gradient(top, #99CCCC, #99CCCC);
+  background-image: -moz-linear-gradient(top, #99CCCC, #99CCCC);
+  background-image: -ms-linear-gradient(top, #99CCCC, #99CCCC);
+  background-image: -o-linear-gradient(top, #99CCCC, #99CCCC);
+  background-image: linear-gradient(to bottom, #99CCCC, #99CCCC);
+  text-decoration: none;
+}
+
+caption {
+    font-weight: bold;
+}
