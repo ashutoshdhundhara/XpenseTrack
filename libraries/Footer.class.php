@@ -44,6 +44,7 @@ class XT_Footer
     {
         $retval = '';
         if ($this->_isEnabled) {
+            $retval .= '</div></div>';
             $retval .= '</body></html>';
         }
 

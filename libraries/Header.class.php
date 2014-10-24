@@ -271,6 +271,12 @@ class XT_Header
     {
         $retval = '';
 
+        $retval = '<header class="green_grad">'
+            . '<div class="app_title">XpenseTrack</div>'
+            . $this->_getLoginDetails()
+            . '</header>';
+        $retval .= '<div class="body_area">';
+        $retval .= '<div class="body_content">';
         return $retval;
     }
 
@@ -284,9 +290,9 @@ class XT_Header
         $retval = '';
         if (isset($_SESSION['login_id'])) {
             $retval .= '<div class="login_details">'
-                . 'Login ID : '
-                . '<strong> ' . $_SESSION['login_id'] . ' </strong>'
-                . '<a href="logout.php" class="blue"> Logout</a>'
+                . 'welcome '
+                . '<strong class="username"> ' . $_SESSION['login_id'] . ' </strong>'
+                . '<a href="logout.php" class="logout_link"> [Logout]</a>'
                 . '</div>';
         }
 
