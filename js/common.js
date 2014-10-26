@@ -4,6 +4,7 @@ $(document).ready(function () {
 
     $('a.delete_expense').click(function (event) {
         event.preventDefault();
+        var $notification = XT_showNotification();
         $that = $(this);
         // Ajax request for Cluster map.
         $.ajax({
@@ -63,7 +64,7 @@ $(document).ready(function () {
                 alert('Enter Date!');
                 return false;
             }
-
+            var $notification = XT_showNotification();
             $.ajax({
                 type: 'POST',
                 url: 'dashboard.php',
