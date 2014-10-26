@@ -18,7 +18,7 @@ CREATE TABLE `user_details` (
   `total_expenses` int(10) NOT NULL,
   `total_balance` int(10) NOT NULL,
   PRIMARY KEY (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Contains User''s details';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Contains Users details';
 
 -- --------------------------------------------------------
 
