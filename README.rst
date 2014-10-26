@@ -6,6 +6,9 @@ DEMO
 `Website link.
 <http://sharewithashu.netai.net/xt/>`_
 
+- Demo Username: test
+- Demo Passowrd: test123
+
 REQUIREMENTS
 ------------
 - PHP (>= 5.0)
