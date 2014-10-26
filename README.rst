@@ -1,6 +1,11 @@
 XpenseTrack - Keeps a track of day to day expenses.
 ===================================================
 
+DEMO
+----
+`Website link.
+<http://sharewithashu.netai.net/xt/>`_
+
 REQUIREMENTS
 ------------
 - PHP (>= 5.0)
